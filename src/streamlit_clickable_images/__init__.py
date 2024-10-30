@@ -9,11 +9,11 @@ import base64
 # and that the code to display that component is in the "frontend" folder
 frontend_dir = (Path(__file__).parent / "frontend").absolute()
 _component_func = components.declare_component(
-	"streamlit_clickable_images", path=str(frontend_dir)
+	"streamlit_button_with_images_and_links", path=str(frontend_dir)
 )
 
 # Create the python function that will be called
-def streamlit_clickable_images(
+def streamlit_button_with_images_and_links(
     key: Optional[str] = None,
     image: Optional[bin] = None,
     label: Optional[str] = None,
@@ -60,7 +60,7 @@ def main():
     image_link = './test.jpg'
     value = st.text_input('asd')
     bin_bg = base64.b64encode(open(image_link, "rb").read()).decode()
-    value = streamlit_clickable_images(image=bin_bg, label='test', height='20vh', labelColor='white', font_size='4.5vw', link='example.com')
+    value = streamlit_button_with_images_and_links(image=bin_bg, label='test', height='20vh', labelColor='white', font_size='4.5vw', link='example.com')
     st.write(value)
     st.write(value)
     st.write(123)
