@@ -6,8 +6,8 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
-    name="streamlit-clickable-images",
-    version="0.1.0",
+    name="streamlit_button_with_images_and_links",
+    version="0.1.2",
     author="Usman DG",
     author_email="dimausman@inbox.ru",
     description="Streamlit component which should allow you to replace buttons with images with caption",
