@@ -22,7 +22,8 @@ def streamlit_button_with_images_and_links(
     labelColor: Optional[str] = 'white',
     font_size: Optional[str] = '1.5vw',
     font_family: Optional[str] = 'Century Gothic',
-    link: Optional[str] = None
+    link: Optional[str] = None,
+    padding: Optional[str] = '1vh'
 ):
     """
     Add a descriptive docstring
@@ -36,7 +37,8 @@ def streamlit_button_with_images_and_links(
         labelColor = labelColor,
         font_size= font_size,
         font_family=font_family,
-        link=link
+        link=link,
+        padding=padding
     )
 
     return component_value
@@ -60,7 +62,7 @@ def main():
     image_link = './test.jpg'
     value = st.text_input('asd')
     bin_bg = base64.b64encode(open(image_link, "rb").read()).decode()
-    value = streamlit_button_with_images_and_links(image=bin_bg, label='test', height='20vh', labelColor='white', font_size='4.5vw', link='example.com')
+    value = streamlit_button_with_images_and_links(image=bin_bg, label='very long text test to see', height='20vh', labelColor='white', font_size='4.5vw', link='example.com', padding='10vh')
     st.write(value)
     st.write(value)
     st.write(123)

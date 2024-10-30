@@ -84,7 +84,7 @@ function onRender(event) {
 
     // You'll most likely want to pass some data back to Python like this
     // sendValue({output1: "foo", output2: "bar"})
-    const {key, image, label, width, height, labelColor,font_size, font_family, link} = event.detail.args;
+    const {key, image, label, width, height, labelColor,font_size, font_family, link, padding} = event.detail.args;
     const obj = document.getElementById("clickable_image")
     const label_text = document.getElementById('textElement')
     const img = obj.querySelector('img')
@@ -98,6 +98,7 @@ function onRender(event) {
     if(image && height_value){
       img.src = 'data:image/png;base64,' + image
       img.style.height = height_value.toString() + 'px'
+      obj.style.padding = getSize(padding).toString() + 'px'
       //img.width = width
     }
     if (link){
@@ -106,7 +107,7 @@ function onRender(event) {
     //sendValue(false)
     obj.onclick = event => buttonClick()
     window.rendered = true
-    Streamlit.setFrameHeight(1.1 * height_value)
+    Streamlit.setFrameHeight(1.1 * height_value + getSize(padding).toString() * 2)
   }
   else{
     sendValue(false)

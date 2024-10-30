@@ -5,7 +5,7 @@ Streamlit component which should allow you to replace buttons with images with c
 ## Installation instructions 
 
 ```sh
-pip install streamlit-clickable-images
+pip streamlit_button_with_images_and_links
 ```
 
 ## Usage instructions
@@ -13,8 +13,8 @@ pip install streamlit-clickable-images
 ```python
 import streamlit as st
 
-from streamlit_clickable_images import streamlit_clickable_images
+from streamlit_clickable_images import streamlit_button_with_images_and_links
 
-value = streamlit_clickable_images()
+value = streamlit_button_with_images_and_links()
 
 st.write(value)
