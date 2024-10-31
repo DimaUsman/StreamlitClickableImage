@@ -62,7 +62,7 @@ def main():
     image_link = './test.jpg'
     value = st.text_input('asd')
     bin_bg = base64.b64encode(open(image_link, "rb").read()).decode()
-    value = streamlit_button_with_images_and_links(image=bin_bg, label='very long text test to see', height='20vh', labelColor='white', font_size='4.5vw', link='example.com', padding='10vh')
+    value = streamlit_button_with_images_and_links(image=bin_bg, label='very long text test to see', height='20vh', labelColor='white', font_size='4.5vw', padding='10vh')
     st.write(value)
     st.write(value)
     st.write(123)

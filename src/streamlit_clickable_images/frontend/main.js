@@ -9,7 +9,7 @@ function sendValue(value) {
 
 function buttonClick() {
   sendValue(true)
-  setTimeout(sendValue(false),300)
+  setTimeout(() => sendValue(false),2000)
 }
 /**
  * The component's render function. This will be called immediately after
